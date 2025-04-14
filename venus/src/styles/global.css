@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+.titulos {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.subtitulos {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
