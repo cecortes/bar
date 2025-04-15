@@ -1,3 +1,139 @@
 ---
 ---
-<h1 class="titulos text-6xl">HERO SECTION</h1>
+<section class="hero" style="height: 100vh; background: url('/rentoy.webp') center/cover no-repeat;">
+  <div class="hero-title">
+    <h1>Rentoy</h1>
+  </div>
+  <div class="hero-content">
+    <p>Sabores que se sienten como casa, en el corazón de la ciudad.</p>
+    <a href="#reserva">Reserva ahora</a>
+  </div>
+</section>
+
+<style>
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    background-size: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    animation: zoomIn 8s ease-out forwards;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeUp 2s ease-out forwards;
+    opacity: 0;
+  }
+  .hero-content {
+    position: relative;
+    max-width: 700px;
+    padding: 0 5%;
+    z-index: 10;
+    animation: fadeUp 2s ease-out forwards;
+    opacity: 0;
+    margin-bottom: 2rem;
+    margin-right: auto;
+  }
+
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4.5rem;
+    color: #fff;
+    margin: 0 0 1rem;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    text-wrap: pretty;
+  }
+
+  .hero a {
+    display: inline-block;
+    background-color: #F9D857;
+    color: #1C1C1C;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 0.9rem 2.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 2rem;
+  }
+
+  .hero a:hover {
+    background-color: #FFDDAA;
+    transform: scale(1.05);
+  }
+
+  @keyframes zoomIn {
+    0% {
+      background-size: 120%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      align-items: flex-end;
+      padding-bottom: 4rem;
+      background-position: 60% center;
+      animation: none;
+      transition: none;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.8rem;
+      text-wrap: pretty;
+      text-align: justify;
+    }
+
+    .hero a {
+      font-size: 1.3rem;
+      padding: 0.6rem 2rem;
+    }
+
+    .hero-content {
+      padding: 0 1.5rem;
+    }
+  }
+
+</style>
