@@ -4,32 +4,40 @@ import { Icon } from 'astro-icon/components';
 <section id="about" class="about">
 
   <div class="about-top">
-    <!-- Icono -->
-    <Icon name="clock" />
-    <!-- Texto -->
-    <p>Horario</p>
-    <p>Lun - Dom / 12am - 12 pm</p>
-    <!-- Icono -->
-    <Icon name="reserva" />
-    <!-- Texto -->
-    <p>Reserva</p>
-    <p>222 595856</p>
-    <!-- Icono -->
-    <Icon name="cubiertos" />
-    <!-- Texto -->
-    <p>Menú</p>
-    <p>Prueba la diferencia</p>
+
+    <div class="about-title">
+      <!-- Icono -->
+      <Icon name="clock" class="icon" />
+      <!-- Texto -->
+      <p class="about-tile">Horario</p>
+      <p class="about-info">Lun - Dom / 12am - 12 pm</p>
+    </div>
+
+    <div class="about-title">
+      <!-- Icono -->
+      <Icon name="reserva" />
+      <!-- Texto -->
+      <p class="about-tile">Reserva</p>
+      <p class="about-info md:hidden">Tel:</p>
+      <p class="about-info">222 595856</p>
+    </div>
+
+    <div class="about-title">
+      <!-- Icono -->
+      <Icon name="cubiertos" />
+      <!-- Texto -->
+      <p class="about-tile">Menú</p>
+      <p class="about-info">Prueba la diferencia</p>
+    </div>
   </div>
 
   <div class="about-content">
     <!-- Imagen Platillo -->
     <img src="/platillo.webp" alt="Platillo delicioso!">
     <!-- Texto -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dicta impedit nam. Similique perspiciatis in quia magni distinctio repellat consequatur, eos vitae temporibus voluptas nihil, officiis obcaecati deserunt corporis provident.
+    <p class="about-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dicta impedit nam. Similique perspiciatis in quia magni distinctio repellat consequatur, eos vitae temporibus voluptas nihil, officiis obcaecati deserunt corporis provident.
     Assumenda saepe, esse dignissimos repellat labore doloribus sint nulla, dolorum in culpa nesciunt earum, minus quod itaque placeat amet debitis? At obcaecati dolorem suscipit excepturi omnis dicta odio voluptate error!
-    Aut, architecto? Quis inventore vero velit sint sed quasi, vel nostrum, nisi amet quia perspiciatis, nam consectetur. Voluptas obcaecati excepturi nemo reprehenderit culpa nihil, facere, commodi possimus mollitia ut dolore!
-    Atque ab similique necessitatibus, sunt et obcaecati vero officiis quos fugit illum magni dolor ipsa doloribus sapiente quia sequi reiciendis. Unde deserunt quia dolores laudantium molestiae tenetur, itaque possimus nemo.
-    Quidem, eos nihil. Rerum, molestiae nihil nulla, dolorem eius expedita iste veritatis esse, ab minus voluptas! Architecto perferendis at facilis enim officia nam doloribus dolores nobis. Dignissimos est magni at!
+    Aut, architecto? 
     </p>
     <!-- CTA Reservar -->
     <a href="#reserva">Reserva ahora</a>
@@ -38,6 +46,7 @@ import { Icon } from 'astro-icon/components';
 </section>
 
 <style>
+  @import 'tailwindcss';
   .about {
     display: flex;
     flex-direction: column;
@@ -45,40 +54,104 @@ import { Icon } from 'astro-icon/components';
     justify-content: center;
     padding: 2rem 0;
     width: 100%;
+    background: #1f1c1c;
   }
 
   .about-top {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    background: #1f1c1c;
+    background: #F9D857;
+    padding: 1rem;
+    @apply h-[90px] max-w-[350px] rounded-[2rem] sm:max-w-[600px] md:max-w-[1200px] md:rounded-[2.5rem] md:h-[120px];
   }
 
-  .about-top p {
-    text-align: center;
-    font-size: 1.2rem;
+  svg {
+    @apply w-[24px] h-[24px] md:w-[40px] md:h-[40px];
   }
 
-  .about-content {
+  .about-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
-    padding: 0 2rem;
+    width: 33.33%;
+    padding: 1rem;
+    text-align: center;
+    @apply h-[114px] md:h-[137px];
+  }
+
+  .about-tile {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    @apply text-[1rem] md:text-[1.5rem];
+  }
+
+  .about-info {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    @apply text-[.7rem] md:text-[1.2rem];
+  }
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
   }
 
   .about-content img {
-    width: 100%;
-    height: auto;
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    border-radius: 2.5rem;
+    animation: about-zoomIn 4s ease-out forwards;
+    @apply w-[90%] md:w-[45%];
   }
 
-  .about-content p {
+  .about-copy {
+    font-family: 'Quicksand', sans-serif;
     text-align: justify;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: auto;
+    color: aliceblue;
+    animation: fadeUp 4s ease-out forwards;
+    @apply w-[90%] md:w-[45%] text-[1.2rem] md:text-[1.5rem];
+  }
+
+  .about-content a {
+    display: inline-block;
+    background-color: #F9D857;
+    color: #1C1C1C;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 0.9rem 2.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    animation: fadeUp 2s ease-out forwards;
+    margin: 1rem;
+  }
+
+  .about-content a:hover {
+    background-color: #FFDDAA;
+    transform: scale(1.05);
+  }
+
+  @keyframes about-zoomIn {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 </style>
