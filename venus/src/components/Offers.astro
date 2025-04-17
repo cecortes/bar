@@ -4,9 +4,9 @@
 <section id="offers" class="offers">
 
   <!-- Title Offers Container -->
-  <div class="offers-title">
+  <div class="offers-title ">
     <h2>Promociones</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 
   <!-- Cards Offers Container -->
@@ -14,50 +14,50 @@
 
     <div class="offers-card">
       <img src="/cafe1.webp" alt="Platillo delicioso!">
-      <h3>Platillo 1</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Café Expresso</h3>
+      <p>Delicioso café expresso con extracto árabe <strong>$45 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/desayuno.webp" alt="Platillo delicioso!">
-      <h3>Platillo 2</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Desayuno Rentoy</h3>
+      <p>Pan artesanal con huevo, tocino y jugo natural. <strong>$125 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/latte.webp" alt="Platillo delicioso!">
-      <h3>Platillo 3</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Latte Gourmet</h3>
+      <p>Delicioso café con leche y arte latte. <strong>$55 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/cerveza.webp" alt="Platillo delicioso!">
-      <h3>Platillo 4</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Cerveza Heineken</h3>
+      <p>Cerveza fría para disfrutar con amigos. Tarro o michelada <strong>$40 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/barril.webp" alt="Platillo delicioso!">
-      <h3>Platillo 5</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Cerveza de Barril</h3>
+      <p>Cerveza de barril para momentos especiales. <strong>$65 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/cubalibre.webp" alt="Platillo delicioso!">
-      <h3>Platillo 6</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Cuba Libre</h3>
+      <p>Cuba libre con un toque especial y el sabor de la Habana <strong>$80 MXN</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
 
     <div class="offers-card">
       <img src="/ambiente.webp" alt="Platillo delicioso!">
-      <h3>Platillo 7</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius quasi ipsa iure sint, aspernatur alias nihil veritatis sed odit exercitationem minus iusto provident quibusdam ea debitis blanditiis aperiam cupiditate?</p>
+      <h3>Ambiente Rentoy</h3>
+      <p>Disfruta tu bebida en un espacio cálido y acogedor. <strong>GRATIS</strong></p>
       <a href="#reserva">Reserva ahora</a>
     </div>
   </div>
@@ -65,14 +65,16 @@
 </section>
 
 <style>
+  @import "tailwindcss";
   .offers {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 100%;
     gap: 2rem;
+    background-color: #222222d0;
   }
 
   .offers-title {
@@ -80,18 +82,86 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
-    width: 100%;
-    height: 120px;
     background-color:  #F9D857;
+    @apply py-[2rem] h-[120px] md:py-[2rem] md:h-[150px] mt-[2rem] mb-[1rem] mr-[auto] ml-[auto] md:ml-0;
+    @apply w-[90%] md:w-[80%] rounded-[1rem] md:rounded-r-[40px] md:rounded-l-[0];
   }
 
   .offers-title h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: 3rem;
     font-weight: 700;
     color: #1f1c1c;
-    margin-right: auto;
-    margin-left: 1rem;
+    @apply text-[2rem] md:text-[3rem] md:mr-[auto] md:ml-[1rem];
+  }
+
+  .offers-title p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: #1f1c1c;
+    @apply text-center text-[1.2rem] md:text-[1.8rem] md:mr-[auto] md:ml-[1rem] md:text-left;
+  }
+
+  .offers-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @apply gap-[4rem] md:gap-[6rem];
+  }
+
+  .offers-card {
+    display: flex;
+    align-items: center;
+    background-color: #fae9a6d0;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    @apply w-[90%] h-[600px] md:w-[45%] md:h-[600px];
+    @apply rounded-[1rem] md:rounded-[2rem];
+    @apply flex-col justify-center md:flex-row md:flex-wrap md:justify-between;
+  }
+
+  .offers-card img {
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    @apply w-[100%] h-[60%] md:w-[100%] md:h-[50%];
+  }
+
+  .offers-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #1f1c1c;
+    @apply text-[1.5rem] md:text-[2rem] md:mr-[0] m-[.5rem] mr-[auto];
+  }
+
+  .offers-card p {
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: #1f1c1c;
+    @apply text-justify text-[1.2rem] md:text-[1.5rem] m-[.5rem];
+    @apply flex flex-wrap flex-row justify-between md:block;
+  }
+
+  .offers-card p strong {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #454343;
+    @apply text-justify text-[1.2rem] ml-[auto] mb-[12px] md:text-[1.5rem];
+  }
+
+  .offers-card a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #F9D857;
+    @apply text-[1.2rem] md:text-[1.5rem] m-[.5rem] bg-[#1f1c1c] rounded-[1rem] px-[2rem] py-[0.5rem];
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .offers-card a:hover {
+    background-color: #454343;
+    color: #F9D857;
   }
 </style>
