@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon/components";
+
+---
+
+<section id="end" class="end-container">
+
+  <!-- Title container -->
+  <div class="title-end">
+    <Icon name="rentoy" />
+    <h2>Rentoy</h2>
+    <p>Esperamos verte pronto en Rentoy</p>
+  </div>
+
+  <!-- About & Phone -->
+  <div class="about-phone">
+
+    <div class="about-end">
+      <h3>Sobre nosotros</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+    </div>
+
+    <div class="phone-end">
+      <h3>Teléfono</h3>
+      <p>55 1234 5678</p>
+    </div>
+
+  </div>
+
+  <!-- Address & Openning -->
+  <div class="addr-opn">
+
+    <div class="address-end">
+      <h3>Dirección</h3>
+      <p>Av. Insurgentes Sur 1234, Ciudad de México</p>
+    </div>
+
+    <div class="open-end">
+      <h3>Horarios</h3>
+      <p>Lunes a Domingo: 8:00 am - 10:00 pm</p>
+    </div>
+
+  </div>
+
+  <!-- Footer container -->
+  <footer></footer>
+
+</section>
+
+<style>
+  .end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #1f1c1c;
+    color: #F9D857;
+  }
+
+  .title-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .title-end h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+</style>
