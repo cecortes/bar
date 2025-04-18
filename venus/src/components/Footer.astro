@@ -12,35 +12,52 @@ import { Icon } from "astro-icon/components";
     <p>Esperamos verte pronto en Rentoy</p>
   </div>
 
-  <!-- About & Phone -->
-  <div class="about-phone">
+  <div class="copy-end">
 
-    <div class="about-end">
-      <h3>Sobre nosotros</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+    <!-- About & Phone -->
+    <div class="about-phone">
+  
+      <div class="about-end">
+        <h3>
+          <Icon name="about" class="foot-icon"/>
+          Rentoy
+        </h3>
+        <p class="p-end">Atrévete a disfrutar una experiencia única en el corazón de la ciudad.</p>
+      </div>
+  
+      <div class="phone-end">
+        <h3>
+          <Icon name="phone" class="foot-icon"/>
+          Teléfono
+        </h3>
+        <p class="p-end">55 1234 5678</p>
+      </div>
+  
     </div>
-
-    <div class="phone-end">
-      <h3>Teléfono</h3>
-      <p>55 1234 5678</p>
+  
+    <!-- Address & Openning -->
+    <div class="addr-opn">
+  
+      <div class="address-end">
+        <h3>
+          <Icon name="location" class="foot-icon"/>
+          Dirección
+        </h3>
+        <p class="p-end">Av. Insurgentes Sur 1234, Ciudad de México</p>
+      </div>
+  
+      <div class="open-end">
+        <h3>
+          <Icon name="horario" class="foot-icon"/>
+          Horarios
+        </h3>
+        <p class="p-end">Lunes a Domingo: 8:00 am - 10:00 pm</p>
+      </div>
+  
     </div>
 
   </div>
 
-  <!-- Address & Openning -->
-  <div class="addr-opn">
-
-    <div class="address-end">
-      <h3>Dirección</h3>
-      <p>Av. Insurgentes Sur 1234, Ciudad de México</p>
-    </div>
-
-    <div class="open-end">
-      <h3>Horarios</h3>
-      <p>Lunes a Domingo: 8:00 am - 10:00 pm</p>
-    </div>
-
-  </div>
 
   <!-- Footer container -->
   <footer></footer>
@@ -48,36 +65,103 @@ import { Icon } from "astro-icon/components";
 </section>
 
 <style>
+  @import "tailwindcss";
   .end-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 2rem;
     background-color: #1f1c1c;
-    color: #F9D857;
+    color: #1f1c1c;
+    @apply flex-col justify-center flex-wrap;
+    @apply md:flex-row md:justify-between;
   }
 
   .title-end {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     margin-bottom: 2rem;
-    width: 80%;
     text-align: center;
+    @apply flex-row flex-wrap justify-center w-[100%];
+    @apply md:w-[20%] md:mb-auto;
   }
 
   svg {
     width: 50px;
     height: 50px;
-    margin-bottom: 1rem;
+    margin-right: 2rem;
   }
 
   .title-end h2 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: #F9D857;
+  }
+
+  .title-end p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #F9D857;
+  }
+
+  .copy-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #F9D857;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    @apply w-[100%] md:w-[75%];
+  }
+
+  .about-phone, .addr-opn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: .5rem;
+  }
+
+  .about-end, .phone-end, .address-end, .open-end {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    @apply flex-col justify-evenly w-[45%];
+    @apply md:flex-row md:justify-center ;
+  }
+
+  .phone-end, .open-end {
+    margin-bottom: auto;
+  }
+
+  .foot-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: .5rem;
+    color: #1f1c1c;
+  }
+
+  .about-end h3, .phone-end h3, .address-end h3, .open-end h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: auto;
+    margin-bottom: .5rem;
+    @apply md:w-[30%] md:text-left md:ml-2;
+  }
+
+  .p-end {
+    text-align: start;
+    text-wrap: pretty;
+    margin-right: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    @apply md:w-[70%] md:text-left;
   }
 </style>
